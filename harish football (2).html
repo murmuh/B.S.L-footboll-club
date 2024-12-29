@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Football Player Registration Form</title> 
+  <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: red url('https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg') no-repeat center center fixed;
+            background-size: cover; /* ছবিটি পুরো ব্যাকগ্রাউন্ডে থাকবে */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        h1 span {
+            display: inline-block;
+        }
+
+        /* প্রতিটি অক্ষর আলাদা রঙের */
+        h1 span:nth-child(1) { color: yellow; }
+        h1 span:nth-child(2) { color: green; }
+        h1 span:nth-child(3) { color: blue; }
+        h1 span:nth-child(4) { color: orange; }
+        h1 span:nth-child(5) { color: purple; }
+        h1 span:nth-child(6) { color: pink; }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.8); /* ফর্ম ব্যাকগ্রাউন্ডে স্বচ্ছ কালো */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 50px auto;
+        }
+
+        fieldset {
+            border: 2px solid white;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            color: yellow;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: yellow;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: green;
+        }
+    </style> 
+ </head> 
+ <body> 
+  <h1> <span>F</span><span>o</span><span>o</span><span>t</span><span>b</span><span>a</span><span>l</span><span>l</span> </h1> 
+  <form action="/submit" method="post"> <!-- Name Section --> 
+   <fieldset> <legend>Personal Information</legend> <label for="firstName">First Name:</label> 
+    <input type="text" id="firstName" name="firstName" required> <label for="middleName">Middle Name:</label> 
+    <input type="text" id="middleName" name="middleName"> <label for="lastName">Last Name:</label> 
+    <input type="text" id="lastName" name="lastName" required> 
+   </fieldset> <!-- Address Section --> 
+   <fieldset> <legend>Address</legend> <label for="village">Village:</label> 
+    <input type="text" id="village" name="village" required> <label for="postOffice">Post Office:</label> 
+    <input type="text" id="postOffice" name="postOffice" required> <label for="policeStation">Police Station:</label> 
+    <input type="text" id="policeStation" name="policeStation" required> <label for="district">District:</label> 
+    <input type="text" id="district" name="district" required> <label for="pinCode">Pin Code:</label> 
+    <input type="number" id="pinCode" name="pinCode" required> <label for="phoneNumber">Phone Number:</label> 
+    <input type="tel" id="phoneNumber" name="phoneNumber" required> 
+   </fieldset> <!-- Personal Details Section --> 
+   <fieldset> <legend>Physical Attributes</legend> <label for="age">Age:</label> 
+    <input type="number" id="age" name="age" min="1" required> <label for="height">Height (cm):</label> 
+    <input type="number" id="height" name="height" min="1" required> 
+   </fieldset> <!-- Submit Button --> <button type="submit">Submit</button> 
+  </form> 
+ 
+</body></html>
